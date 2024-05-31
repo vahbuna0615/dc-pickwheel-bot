@@ -4,6 +4,12 @@ const fs = require('fs');
 const path = require('path');
 const token = process.env.TOKEN;
 
+
+const http = require('http')
+const server = http.createServer()
+
+server.listen(5000)
+
 // create new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 

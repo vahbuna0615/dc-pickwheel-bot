@@ -3,12 +3,13 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const token = process.env.TOKEN;
+const express = require('express');
 
+const app = express()
 
-const http = require('http')
-const server = http.createServer()
-
-server.listen(5000)
+app.listen(5000, () => {
+  console.log('Server listening on port 5000')
+})
 
 // create new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
